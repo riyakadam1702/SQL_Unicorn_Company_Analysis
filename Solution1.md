@@ -17,6 +17,4 @@ Identify companies whose valuation is more than **twice the average valuation** 
 - **Formatting & Sorting**:  
   The industry average is rounded to **2 decimal places** for clarity using `ROUND()` with an explicit cast to `NUMERIC`. The final result is sorted in **descending order** based on company valuation to highlight the largest outliers.
 
----
 
-This query helps spotlight **exceptionally valued unicorns** compared to their industry peers, providing insights into potential outliers or market leaders.
