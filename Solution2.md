@@ -1,4 +1,4 @@
-### 🧠 Question:
+### 🧠 Problem Statement:
 Which investor appears in the **largest number of unicorns**?
 
 ---
