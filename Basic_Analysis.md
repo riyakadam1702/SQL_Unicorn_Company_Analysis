@@ -5,6 +5,11 @@
 ```sql
 SELECT COUNT(*) AS total_unicorns FROM companies;
 ```
+### Output
+| total\_unicorns |
+| --------------- |
+| 1074            |
+
 ### List the names of all unicorns from India.
 ```sql
 SELECT company FROM companies WHERE country = 'India';
