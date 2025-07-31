@@ -45,15 +45,15 @@ ORDER BY f.valuation DESC;
 
 ---
 
-### ✅ Sample Output
+### 📊 Top 5 Companies with Valuation > 2× Industry Average
 
-| Company    | Industry                           | Valuation        | Industry Avg     |
-|------------|------------------------------------|------------------|------------------|
-| Bytedance  | Artificial intelligence            | $180B            | ~$4.49B          |
-| SHEIN      | E-commerce & direct-to-consumer    | $100B            | ~$3.84B          |
-| SpaceX     | Other                              | $100B            | ~$4.34B          |
-| Stripe     | Fintech                            | $95B             | ~$3.94B          |
-| Klarna     | Fintech                            | $46B             | ~$3.94B          |
+| Company    | Industry                          | Valuation ($)      | Industry Avg ($)       |
+|------------|-----------------------------------|---------------------|-------------------------|
+| Bytedance  | Artificial intelligence           | 180,000,000,000     | 4,488,095,207.62        |
+| SpaceX     | Other                             | 100,000,000,000     | 4,344,827,550.90        |
+| SHEIN      | E-commerce & direct-to-consumer   | 100,000,000,000     | 3,837,878,719.39        |
+| Stripe     | Fintech                           | 95,000,000,000      | 3,937,500,009.14        |
+| Klarna     | Fintech                           | 46,000,000,000      | 3,937,500,009.14        |
 
 ---
 
