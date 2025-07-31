@@ -52,7 +52,7 @@ ORDER BY valuation_diff DESC;
 
 ---
 
-### 📊 Sample Output (Top Entry)
+### 📊 Output (Top Entry)
 
 | Company    | Industry                | Valuation         | Industry Avg       | Valuation Diff     |
 |------------|--------------------------|--------------------|---------------------|---------------------|
