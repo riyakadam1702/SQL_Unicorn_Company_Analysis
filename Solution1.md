@@ -1,4 +1,4 @@
-### 🧠 Question:
+### 🧠 Problem Statement:
 Identify companies whose valuation is more than **twice the average valuation** for their industry.
 
 ---
