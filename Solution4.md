@@ -1,9 +1,9 @@
-### 🧠 Problem Statement:
+### Problem Statement:
 Identify unicorn companies that are backed by **more than one top-tier investor**, such as **Tiger Global**, **Sequoia**, and **SoftBank**.
 
 ---
 
-### ⚙️ Procedure:
+### Procedure:
 
 1. **Investor Analysis**:
    - Check if each company's `select_investors` string contains any of the three investors using `POSITION(...)`.
@@ -16,7 +16,7 @@ Identify unicorn companies that are backed by **more than one top-tier investor*
 
 ---
 
-### 💻 SQL Query
+### SQL Query
 
 ```sql
 SELECT
@@ -39,7 +39,7 @@ WHERE f.select_investors IS NOT NULL
 
 ---
 
-### 📊 Output
+### Output
 
 | Company                | Select Investors                                                                                   | Top-Tier Count |
 |------------------------|----------------------------------------------------------------------------------------------------|----------------|
@@ -57,7 +57,7 @@ WHERE f.select_investors IS NOT NULL
 
 ---
 
-### 💡 Insight:
+### Insight:
 
 Among unicorn startups, **12 companies** stand out by being backed by **multiple elite venture capital firms**. These companies are not just valuable—they are **highly trusted by major global investors**, indicating strong strategic positions, promising growth potential, and investor confidence.  
 This kind of analysis helps **VC firms, analysts, and stakeholders** identify firms that are likely to be future industry leaders.
