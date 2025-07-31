@@ -17,4 +17,25 @@ Identify companies whose valuation is more than **twice the average valuation** 
 - **Formatting & Sorting**:  
   The industry average is rounded to **2 decimal places** for clarity using `ROUND()` with an explicit cast to `NUMERIC`. The final result is sorted in **descending order** based on company valuation to highlight the largest outliers.
 
+### 💻 SQL Query
+```sql
+WITH industry_avg AS (
+  SELECT 
+     i.industry,
+     AVG(CAST(f.valuation AS REAL)) AS avg_valuation
+  FROM industries i 
+  JOIN funding f ON i.company_id = f.company_id
+  GROUP BY i.industry
+)
 
+SELECT 
+    c.company,
+    i.industry,
+    f.valuation,
+    ROUND(ia.avg_valuation::numeric, 2) AS industry_avg
+FROM companies c 
+JOIN industries i ON c.company_id = i.company_id
+JOIN funding f ON c.company_id = f.company_id
+JOIN industry_avg ia ON i.industry = ia.industry
+WHERE CAST(f.valuation AS REAL) > 2 * ia.avg_valuation
+ORDER BY f.valuation DESC;
