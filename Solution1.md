@@ -9,13 +9,15 @@ Identify companies whose valuation is more than **twice the average valuation** 
   Calculates the **average valuation** of companies within each industry by joining the `industries` and `funding` tables. The results are grouped by `industry` to produce a benchmark valuation for comparison.
 
 - **Main Query**:  
-  Joins the `companies`, `industries`, and `funding` tables with the previously defined CTE (`industry_avg`) using the `industry` column as the key.
+  Joins the `companies`, `industries`, and `funding` tables with the CTE using the `industry` column.
 
 - **Filtering Condition**:  
-  Applies a `WHERE` clause to return only those companies whose individual `valuation` is **greater than twice the average valuation** (`2 × industry_avg`) of their respective industry.
+  Returns only those companies whose valuation is **greater than 2× the industry average**.
 
 - **Formatting & Sorting**:  
-  The industry average is rounded to **2 decimal places** for clarity using `ROUND()` with an explicit cast to `NUMERIC`. The final result is sorted in **descending order** based on company valuation to highlight the largest outliers.
+  The industry average is rounded to 2 decimal places for clarity. Results are sorted in descending order of valuation.
+
+---
 
 ### 💻 SQL Query
 ```sql
@@ -32,17 +34,30 @@ SELECT
     c.company,
     i.industry,
     f.valuation,
-    ROUND(ia.avg_valuation::numeric, 2) AS industry_avg
+    ROUND(ia.avg_valuation, 2) AS industry_avg
 FROM companies c 
 JOIN industries i ON c.company_id = i.company_id
 JOIN funding f ON c.company_id = f.company_id
 JOIN industry_avg ia ON i.industry = ia.industry
 WHERE CAST(f.valuation AS REAL) > 2 * ia.avg_valuation
 ORDER BY f.valuation DESC;
+```
+
+---
+
+### ✅ Sample Output
+
+| Company    | Industry                           | Valuation        | Industry Avg     |
+|------------|------------------------------------|------------------|------------------|
+| Bytedance  | Artificial intelligence            | $180B            | ~$4.49B          |
+| SHEIN      | E-commerce & direct-to-consumer    | $100B            | ~$3.84B          |
+| SpaceX     | Other                              | $100B            | ~$4.34B          |
+| Stripe     | Fintech                            | $95B             | ~$3.94B          |
+| Klarna     | Fintech                            | $46B             | ~$3.94B          |
+
+---
 
 ### 📊 Insight
 
-These companies are **exceptional outliers** within their industries, with valuations
-significantly surpassing their peers. Bytedance and Stripe, for example, are valued at
-over **20×** the average in their sectors, indicating either massive market leadership,
-disruptive innovation, or unique investor confidence.
+These companies are **exceptional outliers** within their industries, with valuations significantly surpassing their peers. Bytedance and Stripe, for example, are valued at over **20×** the average in their sectors, indicating either massive market leadership, disruptive innovation, or unique investor confidence.
+
