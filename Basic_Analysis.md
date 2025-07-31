@@ -1,12 +1,7 @@
-# 🦄 Unicorn Companies SQL Analysis
 
-This project explores a dataset of unicorn companies using SQL queries to uncover patterns across industries, countries, investors, and valuations. The analysis covers over 1000 unicorns and provides insights into startup trends, funding dynamics, and investor influence globally.
+## SQL Query Library
 
----
-
-## 📘 SQL Query Library
-
-### 🔍 Show the top 5 most valuable companies.
+###  Show the top 5 most valuable companies.
 ```sql
 SELECT c.company, f.valuation
 FROM companies c
@@ -15,7 +10,7 @@ ORDER BY CAST(f.valuation AS REAL) DESC
 LIMIT 5;
 ```
 
-### 🔍 Find all unicorns in the 'Fintech' industry.
+###  Find all unicorns in the 'Fintech' industry.
 ```sql
 SELECT c.company, i.industry
 FROM companies c
@@ -23,13 +18,13 @@ JOIN industries i ON c.company_id = i.company_id
 WHERE i.industry = 'Fintech';
 ```
 
-### 🔍 What is the average valuation of all unicorns?
+###  What is the average valuation of all unicorns?
 ```sql
 SELECT ROUND(AVG(CAST(valuation AS REAL)), 2) AS avg_valuation
 FROM funding;
 ```
 
-### 🔍 Which companies were founded before the year 2010?
+###  Which companies were founded before the year 2010?
 ```sql
 SELECT c.company, d.year_founded
 FROM companies c
@@ -37,7 +32,7 @@ JOIN dates d ON c.company_id = d.company_id
 WHERE d.year_founded < 2010;
 ```
 
-### 🔍 What is the minimum and maximum valuation among all companies and which companies have those valuations?
+###  What is the minimum and maximum valuation among all companies and which companies have those valuations?
 ```sql
 SELECT company, valuation
 FROM companies c
@@ -50,7 +45,7 @@ WHERE CAST(f.valuation AS REAL) = (
 );
 ```
 
-### 🔍 Which unicorns were added in the year 2022?
+###  Which unicorns were added in the year 2022?
 ```sql
 SELECT c.company, d.date_joined
 FROM companies c
@@ -58,7 +53,7 @@ JOIN dates d ON c.company_id = d.company_id
 WHERE EXTRACT(YEAR FROM d.date_joined) = 2022;
 ```
 
-### 🔍 How many companies belong to each country?
+###  How many companies belong to each country?
 ```sql
 SELECT country, COUNT(*) AS company_count
 FROM companies
@@ -66,14 +61,14 @@ GROUP BY country
 ORDER BY company_count DESC;
 ```
 
-### 🔍 What is the average year of founding for unicorn companies?
+###  What is the average year of founding for unicorn companies?
 ```sql
 SELECT ROUND(AVG(year_founded), 0) AS avg_year_founded
 FROM dates
 WHERE year_founded IS NOT NULL;
 ```
 
-### 🔍 Which 5 countries have the most unicorn companies?
+### Which 5 countries have the most unicorn companies?
 ```sql
 SELECT country, COUNT(*) AS unicorn_count
 FROM companies
@@ -82,7 +77,7 @@ ORDER BY unicorn_count DESC
 LIMIT 5;
 ```
 
-### 🔍 What are the top 3 industries by number of unicorns?
+###  What are the top 3 industries by number of unicorns?
 ```sql
 SELECT industry, COUNT(*) AS unicorn_count
 FROM industries
@@ -91,7 +86,7 @@ ORDER BY unicorn_count DESC
 LIMIT 3;
 ```
 
-### 🔍 Calculate the average valuation per industry.
+###  Calculate the average valuation per industry.
 ```sql
 SELECT i.industry, ROUND(AVG(CAST(f.valuation AS REAL)), 2) AS avg_valuation
 FROM industries i
@@ -100,7 +95,7 @@ GROUP BY i.industry
 ORDER BY avg_valuation DESC;
 ```
 
-### 🔍 List all companies that have a valuation above the industry average.
+###  List all companies that have a valuation above the industry average.
 ```sql
 WITH industry_avg AS (
     SELECT industry, AVG(CAST(valuation AS REAL)) AS avg_valuation
