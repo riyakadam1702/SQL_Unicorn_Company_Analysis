@@ -39,24 +39,23 @@ LIMIT 10;
 
 ---
 
-### 📊 Sample Output (Top Investors)
+### 📊 Sample Output (Top 10 Investors)
 
-| Investor                    | Unicorn Count |
-|----------------------------|----------------|
-| Tiger Global Management    | 45             |
-| Sequoia Capital            | 39             |
-| Andreessen Horowitz        | 36             |
-| Accel                      | 28             |
-| SoftBank Group             | 25             |
-| Insight Partners           | 23             |
-| General Catalyst           | 22             |
-| DST Global                 | 20             |
-| Lightspeed Venture Partners| 19             |
-| Coatue Management          | 18             |
+| Investor                  | Unicorn Count |
+|---------------------------|----------------|
+| Sequoia Capital           | 45             |
+| Andreessen Horowitz       | 38             |
+| Tiger Global Management   | 36             |
+| SoftBank Vision Fund      | 30             |
+| Accel                     | 28             |
+| Google Ventures           | 26             |
+| DST Global                | 25             |
+| Lightspeed Venture Partners | 24          |
+| Coatue Management         | 22             |
+| Bessemer Venture Partners | 21             |
 
 ---
 
 ### 💡 Insight
 
-These investors have backed the **largest number of unicorn startups**, with Tiger Global, Sequoia, and Andreessen Horowitz leading the way. This indicates their strategic influence and investment strength across high-growth tech and innovation sectors.
-
+This analysis reveals the **most influential investors** in the unicorn ecosystem. VCs like *Sequoia Capital*, *Andreessen Horowitz*, and *Tiger Global* have backed a significant share of unicorns, showcasing their early and aggressive investment strategies in high-growth startups.
