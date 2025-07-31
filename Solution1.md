@@ -1,9 +1,9 @@
-### 🧠 Problem Statement:
+### Problem Statement:
 Identify companies whose valuation is more than **twice the average valuation** for their industry.
 
 ---
 
-### 🛠️ Procedure:
+### Procedure:
 
 - **CTE (`industry_avg`)**:  
   Calculates the **average valuation** of companies within each industry by joining the `industries` and `funding` tables. The results are grouped by `industry` to produce a benchmark valuation for comparison.
@@ -19,7 +19,7 @@ Identify companies whose valuation is more than **twice the average valuation** 
 
 ---
 
-### 💻 SQL Query
+### SQL Query
 ```sql
 WITH industry_avg AS (
   SELECT 
@@ -45,7 +45,7 @@ ORDER BY f.valuation DESC;
 
 ---
 
-### 📊 Top 5 Companies with Valuation > 2× Industry Average
+### Top 5 Companies with Valuation > 2× Industry Average
 
 | Company    | Industry                          | Valuation ($)      | Industry Avg ($)       |
 |------------|-----------------------------------|---------------------|-------------------------|
@@ -57,7 +57,7 @@ ORDER BY f.valuation DESC;
 
 ---
 
-### 💡 Insight
+### Insight
 
 These companies are **exceptional outliers** within their industries, with valuations significantly surpassing their peers. Bytedance and SpaceX, for example, are valued at over **20×** the average in their sectors, indicating either massive market leadership, disruptive innovation, or unique investor confidence.
 
