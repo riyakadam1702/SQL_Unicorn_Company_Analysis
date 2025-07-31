@@ -39,3 +39,7 @@ JOIN funding f ON c.company_id = f.company_id
 JOIN industry_avg ia ON i.industry = ia.industry
 WHERE CAST(f.valuation AS REAL) > 2 * ia.avg_valuation
 ORDER BY f.valuation DESC;
+
+### 📊 Insight
+
+These companies are **exceptional outliers** within their industries, with valuations significantly surpassing their peers. Bytedance and Stripe, for example, are valued at over **20×** the average in their sectors, indicating either massive market leadership, disruptive innovation, or unique investor confidence.
