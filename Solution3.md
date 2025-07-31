@@ -1,4 +1,4 @@
-### 🧠 Question:
+### 🧠 Problem Statement:
 Which company has the **largest difference** between its current valuation and the **average valuation** of its industry?
 
 ---
