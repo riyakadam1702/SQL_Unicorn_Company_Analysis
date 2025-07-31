@@ -3,7 +3,7 @@ Which company has the **largest difference** between its current valuation and t
 
 ---
 
-### 🛠Procedure:
+### Procedure:
 
 - **CTE 1 (`industry_avg`)**:  
   Calculates the average valuation for each industry by joining the `industries` and `funding` tables and grouping by industry.  
