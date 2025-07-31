@@ -1,4 +1,4 @@
-### 🧠 Question:
+### 🧠 Problem Statement:
 Identify unicorn companies that are backed by **more than one top-tier investor**, such as **Tiger Global**, **Sequoia**, and **SoftBank**.
 
 ---
