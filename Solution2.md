@@ -1,9 +1,9 @@
-### 🧠 Problem Statement:
+### Problem Statement:
 Which investor appears in the **largest number of unicorns**?
 
 ---
 
-### 🛠️ Procedure:
+### Procedure:
 
 - **CTE (`exploded_investors`)**:  
   The `select_investors` column contains comma-separated values. This Common Table Expression (CTE) uses `STRING_TO_ARRAY()` combined with `UNNEST()` to split the investor strings into individual rows, creating one row per investor per company.
@@ -19,7 +19,7 @@ Which investor appears in the **largest number of unicorns**?
 
 ---
 
-### 💻 SQL Query
+### SQL Query
 
 ```sql
 WITH exploded_investors AS (
@@ -39,7 +39,7 @@ LIMIT 10;
 
 ---
 
-### 📊 Sample Output (Top 10 Investors)
+### Sample Output (Top 10 Investors)
 
 | Investor                  | Unicorn Count |
 |---------------------------|----------------|
@@ -56,6 +56,6 @@ LIMIT 10;
 
 ---
 
-### 💡 Insight
+### Insight
 
 This analysis reveals the **most influential investors** in the unicorn ecosystem. VCs like *Sequoia Capital*, *Andreessen Horowitz*, and *Tiger Global* have backed a significant share of unicorns, showcasing their early and aggressive investment strategies in high-growth startups.
