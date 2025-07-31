@@ -1,6 +1,11 @@
 
 ## SQL Query Library
 
+### How many unicorn companies are in the dataset?
+```sql
+SELECT COUNT(*) AS total_unicorns FROM companies;
+```
+
 ###  Show the top 5 most valuable companies.
 ```sql
 SELECT c.company, f.valuation
