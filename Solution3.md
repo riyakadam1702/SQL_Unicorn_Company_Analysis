@@ -1,9 +1,9 @@
-### 🧠 Problem Statement:
+### Problem Statement:
 Which company has the **largest difference** between its current valuation and the **average valuation** of its industry?
 
 ---
 
-### 🛠️ Procedure:
+### 🛠Procedure:
 
 - **CTE 1 (`industry_avg`)**:  
   Calculates the average valuation for each industry by joining the `industries` and `funding` tables and grouping by industry.  
@@ -21,7 +21,7 @@ Which company has the **largest difference** between its current valuation and t
 
 ---
 
-### 💻 SQL Query
+### SQL Query
 
 ```sql
 -- Which company has the largest difference between its valuation and the industry average?
@@ -52,7 +52,7 @@ ORDER BY valuation_diff DESC;
 
 ---
 
-### 📊 Output (Top Entry)
+### Output (Top Entry)
 
 | Company    | Industry                | Valuation         | Industry Avg       | Valuation Diff     |
 |------------|--------------------------|--------------------|---------------------|---------------------|
@@ -60,7 +60,7 @@ ORDER BY valuation_diff DESC;
 
 ---
 
-### 💡 Insight
+### Insight
 
 This query highlights companies like **Bytedance** whose market valuation is an extreme outlier relative to peers in their industry. Such companies may be **industry disruptors**, benefit from unique technology, massive user bases, or exceptional growth models.
 
