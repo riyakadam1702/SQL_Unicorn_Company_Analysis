@@ -40,7 +40,7 @@ This SQL project provided a comprehensive exploration of the **global unicorn la
 
 ### Final Thought
 
-This project demonstrates how **SQL can be a powerful tool** for uncovering business insights from structured data. By combining JOINs, aggregations, subqueries, CTEs, and window functions, we turned raw unicorn data into actionable knowledge about startup trends, global economic growth, and the venture capital ecosystem.
+This project demonstrates how **SQL can be a powerful tool** for uncovering business insights from structured data. By combining JOINs, aggregations, subqueries, CTEs, and window functions, Raw unicorn data has turned into actionable knowledge about startup trends, global economic growth, and the venture capital ecosystem.
 
 
 ---
