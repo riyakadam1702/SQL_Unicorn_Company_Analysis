@@ -1,6 +1,3 @@
-Here’s a **professional conclusion** summarizing the **entire SQL-based analysis** of the unicorn companies dataset, which you can paste directly into your `README.md` on GitHub under the **Conclusion** section:
-
----
 
 ## Conclusion
 
