@@ -48,5 +48,4 @@ This project demonstrates how **SQL can be a powerful tool** for uncovering busi
 
 ---
 
-Let me know if you’d like a final version of your entire `README.md` combining this with the query list and outputs!
 
