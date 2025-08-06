@@ -32,6 +32,16 @@ SELECT company FROM companies WHERE country = 'India';
 ```sql
 SELECT DISTINCT continent FROM companies;
 ```
+### Output 
+| continent     |
+| ------------- |
+| Africa        |
+| Asia          |
+| South America |
+| North America |
+| Europe        |
+| Oceania       |
+
 
 ###  Show the top 5 most valuable companies.
 ```sql
