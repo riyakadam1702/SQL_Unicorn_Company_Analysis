@@ -69,7 +69,7 @@ FROM companies c
 JOIN industries i ON c.company_id = i.company_id
 WHERE i.industry = 'Fintech';
 ```
-### Output 
+### Output top 10
 
 | company     | industry |
 | ----------- | -------- |
@@ -98,7 +98,22 @@ FROM companies c
 JOIN dates d ON c.company_id = d.company_id
 WHERE d.year_founded < 2010;
 ```
+### Output top 10 
 
+| company              | year\_founded |
+| -------------------- | ------------- |
+| Otto Bock HealthCare | 1919          |
+| DJI Innovations      | 2006          |
+| Numbrs               | 1999          |
+| Splashtop            | 2006          |
+| Afiniti              | 2006          |
+| Relativity           | 2001          |
+| Ivalua               | 2000          |
+| Interos              | 2005          |
+| Hosjoy               | 2009          |
+| Strava               | 2009          |
+
+ 
 ###  What is the minimum and maximum valuation among all companies and which companies have those valuations?
 ```sql
 SELECT company, valuation
