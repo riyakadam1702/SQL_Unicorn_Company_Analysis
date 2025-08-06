@@ -51,6 +51,16 @@ JOIN funding f ON c.company_id = f.company_id
 ORDER BY CAST(f.valuation AS REAL) DESC
 LIMIT 5;
 ```
+### Output 
+
+| company   | valuation    |
+| --------- | ------------ |
+| ByteDance | 180000000000 |
+| SpaceX    | 100000000000 |
+| SHEIN     | 100000000000 |
+| Stripe    | 95000000000  |
+| Klarna    | 46000000000  |
+
 
 ###  Find all unicorns in the 'Fintech' industry.
 ```sql
