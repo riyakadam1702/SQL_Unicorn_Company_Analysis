@@ -69,6 +69,21 @@ FROM companies c
 JOIN industries i ON c.company_id = i.company_id
 WHERE i.industry = 'Fintech';
 ```
+### Output 
+
+| company     | industry |
+| ----------- | -------- |
+| Matrixport  | Fintech  |
+| candy.com   | Fintech  |
+| CoinTracker | Fintech  |
+| 4 Numbers   | Fintech  |
+| MobileCoin  | Fintech  |
+| Clara       | Fintech  |
+| CoinDCX     | Fintech  |
+| Masterworks | Fintech  |
+| AgentSync   | Fintech  |
+| Marshmallow | Fintech  |
+
 
 ###  What is the average valuation of all unicorns?
 ```sql
