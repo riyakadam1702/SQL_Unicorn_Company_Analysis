@@ -1,4 +1,4 @@
-# 🦄 Unicorn Companies Analysis Using SQL
+#  Unicorn Companies Analysis Using SQL
 
 ## 📖 Project Description
 
