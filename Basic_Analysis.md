@@ -14,6 +14,20 @@ SELECT COUNT(*) AS total_unicorns FROM companies;
 ```sql
 SELECT company FROM companies WHERE country = 'India';
 ```
+### Output top 10
+| company      |
+| ------------ |
+| Darwinbox    |
+| CoinDCX      |
+| Mamaearth    |
+| Hasura       |
+| LEAD School  |
+| Pristyn Care |
+| GlobalBees   |
+| apna         |
+| UpGrad       |
+| Cars24       |
+
 ### Which continents have unicorns?
 ```sql
 SELECT DISTINCT continent FROM companies;
